@@ -53,7 +53,7 @@ static void cmd_exit_work(struct work_struct *work)
 
 void sec_cmd_set_default_result(struct sec_cmd_data *data)
 {
-	memset(data->cmd_result, 0x00, SEC_CMD_RESULT_STR_LEN);
+	memset(data->cmd_result, 0x00, SEC_CMD_RESULT_STR_LEN_EXPAND);
 	memcpy(data->cmd_result, data->cmd, SEC_CMD_STR_LEN);
 	strcat(data->cmd_result, ":");
 }
