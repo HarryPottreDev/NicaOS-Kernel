@@ -61,6 +61,7 @@ int ipa_hotplug(bool remove_cores);  // this is not very generic
 
 #ifdef CONFIG_CPU_THERMAL_IPA
 
+void ipa_update(void);
 struct cpu_p_state {
 	unsigned int freq;
 	unsigned int power;
