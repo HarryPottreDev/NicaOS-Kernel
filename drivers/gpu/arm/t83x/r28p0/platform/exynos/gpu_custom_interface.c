@@ -58,6 +58,14 @@
 #include <mach/apm-exynos.h>
 #endif
 
+#ifdef CONFIG_SOC_EXYNOS7870
+#define GPU_MAX_VOLT		1300000
+#define GPU_MIN_VOLT		500000
+#define GPU_VOLT_STEP		6250
+#else
+#error "Please define gpu voltage ranges for current SoC."
+#endif
+
 extern struct kbase_device *pkbdev;
 
 int gpu_pmqos_dvfs_min_lock(int level)
